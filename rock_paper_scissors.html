@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+</body>
+</html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<script type="text/javascript">
+		function computerPlay() {
+			let computerChoice = Math.floor(Math.random() * 3);
+			if (computerChoice == 0) {
+				return 'rock';
+			} else if (computerChoice == 1) {
+				return 'paper';
+			} else if (computerChoice == 2) {
+				return 'scissors';
+			}
+		}
+
+		function game() {
+			for(i= 0; i < 5; i++) {
+
+				const computerSelection = computerPlay();
+				let playerSelection;
+				
+				while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
+					playerSelection = prompt('Rock, paper, scissors?', ).toLowerCase();
+				}
+
+				console.log('Computer: ' + computerSelection);
+				console.log('Player: ' + playerSelection);
+				console.log(playRound(playerSelection, computerSelection));
+			}
+		}
+
+		function playRound(playerSelection, computerSelection) {
+			if (playerSelection == computerSelection) {
+				return `Tie! You both chose ${playerSelection}`;
+			} else if (playerSelection == 'paper' && computerSelection == 'rock' ||
+				playerSelection == 'scissors' && computerSelection == 'paper' ||
+				playerSelection == 'rock' && computerSelection == 'scissors') {
+				return `Player Wins! ${playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase()} beats ${computerSelection}`;
+			} else {
+				return `Computer Wins! ${computerSelection[0].toUpperCase() + computerSelection.slice(1).toLowerCase()} beats ${playerSelection}`;
+			}
+		}
+
+		game();
+
+	</script>
+</body>
+</html>
