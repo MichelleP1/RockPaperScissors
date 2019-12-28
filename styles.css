@@ -1,0 +1,119 @@
+body {
+	background-color: #cc3399;
+}
+
+h1 {
+	text-align: center;
+	color: black;
+	font-size: 60px;
+	letter-spacing: 3px;
+}
+
+#user-selection {
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 75px;
+}
+
+	#rock {
+		background-color: black;
+		border-color: black;
+		border-width: 5px;
+		border-style: solid;
+		margin-left: 45px;
+		margin-right: 45px;
+		border-radius: 20px;
+		transition: transform .2s;
+	}
+
+	#paper {
+		background-color: black;
+		border-color: black;
+		border-width: 5px;
+		border-style: solid;
+		margin-left: 45px;
+		margin-right: 45px;
+		border-radius: 20px;
+		transition: transform .2s;
+	}
+
+	#scissors {
+		background-color: black;
+		border-color: black;
+		border-width: 5px;
+		border-style: solid;
+		margin-left: 45px;
+		margin-right: 45px;
+		border-radius: 20px;
+		transition: transform .2s;
+	}
+
+	#rock:hover {
+		transform: scale(1.2);
+	}
+
+	#paper:hover {
+		transform: scale(1.2);
+	}
+
+	#scissors:hover {
+		transform: scale(1.2);
+	}
+
+#info {
+	text-align: center;
+}
+
+#selectedIcons {
+	text-align: center;
+}
+
+.playerIcon {
+	background-color: black;
+	border-color: black;
+	border-width: 5px;
+	border-style: solid;
+	margin-left: 45px;
+	margin-right: 45px;
+	border-radius: 20px;
+}
+
+.computerIcon {
+	background-color: black;
+	border-color: black;
+	border-width: 5px;
+	border-style: solid;
+	margin-left: 45px;
+	margin-right: 45px;
+	border-radius: 20px;
+}
+
+.playerLabel {
+	margin-left: 20px;
+	display: inline-block;
+}
+
+.computerLabel {
+	margin-left: 185px;
+	display: inline-block;
+}
+
+.result {
+	text-align: center;
+	color: black;
+}
+
+.declareWinner {
+	text-align: center;
+	color: black;
+}
+
+.score {
+	text-align: center;
+	color: black;
+}
+
+.finalResult {
+	text-align: center;
+	color: black;
+}

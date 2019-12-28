@@ -1,53 +1,25 @@
 <!DOCTYPE html>
-<html>
-</body>
-</html>
+<html lang="en">
 <head>
 	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Rock Paper Scissors</title>
 </head>
 <body>
-	<script type="text/javascript">
-		function computerPlay() {
-			let computerChoice = Math.floor(Math.random() * 3);
-			if (computerChoice == 0) {
-				return 'rock';
-			} else if (computerChoice == 1) {
-				return 'paper';
-			} else if (computerChoice == 2) {
-				return 'scissors';
-			}
-		}
+	<h1>ROCK • PAPER • SCISSORS</h1>
 
-		function game() {
-			for(i= 0; i < 5; i++) {
+	<div id="user-selection">
+		<button id="rock"><img src="images/rock.png" alt="rock"></button>
+		<button id="paper"><img src="images/paper.png" alt="paper"></button>
+		<button id="scissors"><img src="images/scissors.png" alt="scissors"></button>
+	</div>
 
-				const computerSelection = computerPlay();
-				let playerSelection;
-				
-				while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
-					playerSelection = prompt('Rock, paper, scissors?', ).toLowerCase();
-				}
+	<div id="results"></div>
 
-				console.log('Computer: ' + computerSelection);
-				console.log('Player: ' + playerSelection);
-				console.log(playRound(playerSelection, computerSelection));
-			}
-		}
+	<div id="info"></div>
 
-		function playRound(playerSelection, computerSelection) {
-			if (playerSelection == computerSelection) {
-				return `Tie! You both chose ${playerSelection}`;
-			} else if (playerSelection == 'paper' && computerSelection == 'rock' ||
-				playerSelection == 'scissors' && computerSelection == 'paper' ||
-				playerSelection == 'rock' && computerSelection == 'scissors') {
-				return `Player Wins! ${playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase()} beats ${computerSelection}`;
-			} else {
-				return `Computer Wins! ${computerSelection[0].toUpperCase() + computerSelection.slice(1).toLowerCase()} beats ${playerSelection}`;
-			}
-		}
+	<div id="selectedIcons"></div>
 
-		game();
-
-	</script>
+	<script src="script.js"></script> 
 </body>
 </html>
